@@ -4,7 +4,7 @@ import { useParams, Link } from "react-router-dom";
 import dados from "../utils/dados";
 import { AiOutlineArrowDown, AiTwotoneFire } from "react-icons/ai";
 import { RxExit } from "react-icons/rx";
-import * as C from "../styles/style";
+import * as C from "./style";
 
 const Debts = () => {
   const { cpf } = useParams();
@@ -36,7 +36,7 @@ const Debts = () => {
     <C.Container>
       <div className="main-debts">
         <div className="header-debts">
-          <div className="haha">
+          <div className="name-header">
             <h2>Olá, {cliente.nome}</h2>
             <p>Veja abaixo suas dívidas sob a gestão</p>
           </div>
@@ -51,7 +51,7 @@ const Debts = () => {
             <h1>Oferta Especial</h1>
             <div className="prices">
               <div>
-                <p>De: R${somaDividas}</p>
+                <p className="paragraph-de">De: R${somaDividas}</p>
                 <h2>Por: R${somaDividas / 2}</h2>
               </div>
               <p className="discount">
@@ -73,6 +73,7 @@ const Debts = () => {
                       <div className="div-description" key={index}>
                         <strong>Valor:</strong> R${divida.valor}
                         <strong>Descrição:</strong> {divida.descricao}
+                        <strong>Data:</strong> {divida.data}
                       </div>
                     ))}
                   </>

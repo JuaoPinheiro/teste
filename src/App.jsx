@@ -38,6 +38,7 @@ const App = () => {
         />
         {error && <p className="error-message">{error}</p>}{" "}
         <button onClick={handleConsultarClick}>Consultar CPF</button>
+        <h2>Somente hoje com os melhores descontos para você!</h2>
       </div>
     </C.Container>
   );
