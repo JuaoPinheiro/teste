@@ -10,10 +10,10 @@ const App = () => {
 
   const handleCPFChange = (event) => {
     const inputValue = event.target.value;
-    const numericValue = inputValue.replace(/\D/g, ""); // Remove todos os caracteres não numéricos
+    const numericValue = inputValue.replace(/\D/g, "");
 
     setCPF(numericValue);
-    setError(""); // Limpa o erro ao digitar no input
+    setError(""); 
   };
 
   const handleConsultarClick = () => {
