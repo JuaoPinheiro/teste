@@ -23,39 +23,39 @@ export const Container = styled.div`
     height: auto;
 
     .logo{
-      height: 60px;
-      margin-top: 30px;
+      height: 45px;
+      margin-top: 20px;
     }
 
     h1 {
-      font-size: 30px;
-      text-align: center;
+      font-size: 20px;
+      text-align: start;
+      line-height: 30px;
       color: #da6200;
-      font-weight: bold;
-      margin-bottom: 20px;
-      padding: 30px;
+      margin-bottom: 5px;
+      padding: 20px;
     }
 
     h2 {
       color: #0070cc;
       text-align: center;
-      font-size: 18px;
+      font-size: 16px;
       padding: 20px;
       margin-top: 20px;
     }
 
     input {
-      width: 300px;
+      width: 330px;
       height: 40px;
-      margin-bottom: 30px;
-      border: 1px solid #0070cc;
+      margin-bottom: 15px;
+      border: 1px solid #c8c8c8;
       border-radius: 5px;
       padding-left: 10px;
       outline: none;
     }
 
     button {
-      width: 200px;
+      width: 330px;
       height: 50px;
       border-radius: 5px;
       color: #fff;
@@ -71,9 +71,9 @@ export const Container = styled.div`
     .error-message {
       color: red;
       font-size: 11px;
-      margin-top: -28px;
+      margin-top: -12px;
       margin-bottom: 30px;
-      margin-right: 30px;
+      margin-right: 50px;
     }
   }
 
@@ -84,20 +84,28 @@ export const Container = styled.div`
 
       .error-message {
         font-size: 8px;
-        margin-right: 90px;
+        margin-right: 120px;
       }
     }
   }
 
-  @media (max-width: 335px) {
+  @media (max-width: 435px) {
     .body-home {
       input {
         width: 50%;
       }
 
+      h1{
+        font-size: 15px;
+      }
+
+      h2{
+        font-size: 13px;
+      }
+
       .error-message {
         font-size: 8px;
-        margin-left: 25%;
+        margin-left: 27%;
       }
 
       button {

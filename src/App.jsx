@@ -4,6 +4,11 @@ import * as C from "./styles/style";
 import { useNavigate } from "react-router-dom";
 import Logo from "./assets/logo.png";
 
+const formatCPF = (value) => {
+  const cpfRegex = /^(\d{3})(\d{3})(\d{3})(\d{2})$/;
+  return value.replace(cpfRegex, "$1.$2.$3-$4");
+};
+
 const App = () => {
   const [cpf, setCPF] = useState("");
   const [error, setError] = useState("");
@@ -11,8 +16,7 @@ const App = () => {
 
   const handleCPFChange = (event) => {
     const inputValue = event.target.value;
-    const numericValue = inputValue.replace(/\D/g, "");
-
+    const numericValue = inputValue.replace(/\D/g, "").slice(0, 11); // Limita a 11 dígitos
     setCPF(numericValue);
     setError("");
   };
@@ -25,6 +29,8 @@ const App = () => {
     }
   };
 
+  const formattedCPF = formatCPF(cpf);
+
   return (
     <C.Container>
       <div className="body-home">
@@ -34,9 +40,10 @@ const App = () => {
         </h1>
         <input
           type="text"
-          value={cpf}
+          value={formattedCPF}
           onChange={handleCPFChange}
           placeholder="Digite o CPF"
+          maxLength={14} // Limita a 11 dígitos + 3 caracteres de formatação
         />
         {error && <p className="error-message">{error}</p>}{" "}
         <button onClick={handleConsultarClick}>Consulte seus contratos</button>

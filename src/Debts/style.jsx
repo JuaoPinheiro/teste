@@ -96,10 +96,9 @@ export const Container = styled.div`
     }
 
     .installment {
-      margin-top: 10px;
       font-size: 20px;
       margin-bottom: 10px;
-      padding-top: 30px;
+      padding-top: 10px;
     }
 
     .btn-renegotiate {
@@ -126,7 +125,7 @@ export const Container = styled.div`
 
       h3 {
         color: #0070cc;
-        margin-top: 100px;
+        margin-top: 20px;
         font-size: 30px;
       }
 
@@ -206,10 +205,20 @@ export const Container = styled.div`
     }
   }
 
+  @media (max-width: 560px) {
+    .info-section {
+      .btn-renegotiate {
+        width: 80%;
+        font-size: 15px;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
   @media (max-width: 490px) {
     .header-debts {
       padding: 40px;
-      gap: 150px;
+      gap: 40%;
 
       .link-icon {
         font-size: 18px;
@@ -241,6 +250,14 @@ export const Container = styled.div`
     }
 
     .info-section {
+      .installment {
+        font-size: 15px;
+        margin-bottom: 0;
+        padding-top: 0;
+      }
+    }
+
+    .info-section {
       .discount {
         font-size: 15px;
       }
@@ -252,8 +269,9 @@ export const Container = styled.div`
     .main-debts {
       .origin {
         h3 {
-          font-size: 20px;
+          font-size: 18px;
           text-align: center;
+          margin-top: 0;
         }
       }
     }
@@ -261,9 +279,6 @@ export const Container = styled.div`
     .info-section {
       h1 {
         font-size: 20px;
-      }
-      .btn-renegotiate {
-        width: 80%;
       }
     }
 
