@@ -22,7 +22,7 @@ export const Container = styled.div`
     width: 400px;
     height: auto;
 
-    .logo{
+    .logo {
       height: 45px;
       margin-top: 20px;
     }
@@ -95,11 +95,11 @@ export const Container = styled.div`
         width: 50%;
       }
 
-      h1{
+      h1 {
         font-size: 15px;
       }
 
-      h2{
+      h2 {
         font-size: 13px;
       }
 
@@ -110,6 +110,22 @@ export const Container = styled.div`
 
       button {
         width: 50%;
+      }
+    }
+  }
+
+  @media (max-width: 405px) {
+    .body-home {
+      button {
+        font-size: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 310px) {
+    .body-home {
+      button {
+        font-size: 8px;
       }
     }
   }

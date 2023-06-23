@@ -231,12 +231,6 @@ export const Container = styled.div`
       }
     }
 
-    .origin {
-      h3 {
-        font-size: 10px;
-      }
-    }
-
     .prices {
       gap: 50px;
 
@@ -273,6 +267,12 @@ export const Container = styled.div`
           text-align: center;
           margin-top: 0;
         }
+
+        .div-description {
+          strong {
+            font-size: 18px;
+          }
+        }
       }
     }
 
@@ -301,7 +301,7 @@ export const Container = styled.div`
       }
       .btn-renegotiate {
         width: 90%;
-        font-size: 10px;
+        font-size: 13px;
       }
     }
 
@@ -346,6 +346,13 @@ export const Container = styled.div`
 
     .prices {
       gap: 10px;
+    }
+
+    .text-proposed {
+      .btn-renegotiate {
+        margin-top: 10px;
+        font-size: 10px;
+      }
     }
   }
 `;
