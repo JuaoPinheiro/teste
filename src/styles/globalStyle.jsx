@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-import Background from "../assets/background.png";
 
 const GlobalStyle = createGlobalStyle`
 
@@ -10,19 +9,14 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Poppins', sans-serif;
 }
   body {
-   background-image: url(${Background});
-   background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  min-height: 900px;
+    overflow-x: hidden;
 
   #no-debts{
-    background: rgb(255, 255, 255, 0.7);
-    width: 400px;
+    background-color: #fff;
+    width: 90%;
     text-align: center;
     padding: 30px;
-    margin: 250px 0 auto 150px;
+    margin: 250px 0 auto 5%;
         border-radius: 5px;
 
     .link-no-debts{

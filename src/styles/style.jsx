@@ -1,25 +1,37 @@
 import styled from "styled-components";
+import Background from "../assets/background.png";
 
 export const Container = styled.div`
   display: flex;
   justify-content: start;
   align-items: center;
-  margin: 140px 0 0 200px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url(${Background});
+  background-repeat: no-repeat;
+  background-size: cover;
 
   .body-home {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background: rgb(255, 255, 255, 0.7);
+    background-color: #fff;
     border-radius: 10px;
-    width: 450px;
-    height: 450px;
+    margin: 30px 0 0 150px;
+    width: 400px;
+    height: auto;
+
+    .logo{
+      height: 60px;
+      margin-top: 30px;
+    }
 
     h1 {
-      font-size: 25px;
+      font-size: 30px;
       text-align: center;
-      color: #c35100;
+      color: #da6200;
+      font-weight: bold;
       margin-bottom: 20px;
       padding: 30px;
     }
@@ -27,7 +39,7 @@ export const Container = styled.div`
     h2 {
       color: #0070cc;
       text-align: center;
-      font-size: 15px;
+      font-size: 18px;
       padding: 20px;
       margin-top: 20px;
     }
@@ -66,14 +78,9 @@ export const Container = styled.div`
   }
 
   @media (max-width: 730px) {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     .body-home {
-      width: 100%;
-      height: 800px;
+      width: 90%;
+      margin-left: 5%;
 
       .error-message {
         font-size: 8px;

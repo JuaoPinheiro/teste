@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import * as C from "./styles/style";
 import { useNavigate } from "react-router-dom";
+import Logo from "./assets/logo.png";
 
 const App = () => {
   const [cpf, setCPF] = useState("");
@@ -13,7 +14,7 @@ const App = () => {
     const numericValue = inputValue.replace(/\D/g, "");
 
     setCPF(numericValue);
-    setError(""); 
+    setError("");
   };
 
   const handleConsultarClick = () => {
@@ -27,6 +28,7 @@ const App = () => {
   return (
     <C.Container>
       <div className="body-home">
+        <img className="logo" src={Logo} alt="" />
         <h1>
           Consulte se existem dívidas no seu CPF ou acompanhe seus acordos
         </h1>
@@ -37,8 +39,10 @@ const App = () => {
           placeholder="Digite o CPF"
         />
         {error && <p className="error-message">{error}</p>}{" "}
-        <button onClick={handleConsultarClick}>Consultar CPF</button>
-        <h2>Somente hoje com os melhores descontos para você!</h2>
+        <button onClick={handleConsultarClick}>Consulte seus contratos</button>
+        <h2>
+          Somente hoje com os melhores <br /> descontos para você!
+        </h2>
       </div>
     </C.Container>
   );

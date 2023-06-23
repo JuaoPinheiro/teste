@@ -26,6 +26,11 @@ const Debts = () => {
     0
   );
 
+  const somaDividas1 = cliente.dividas1.reduce(
+    (total, divida1) => total + divida1.valor,
+    0
+  );
+
   const [showDetails, setShowDetails] = useState(false);
 
   const toggleDetails = () => {
@@ -55,16 +60,22 @@ const Debts = () => {
                 <h2>Por: R${somaDividas / 2}</h2>
               </div>
               <p className="discount">
-                Desconto de 50% <br />
-                <AiTwotoneFire className="fire-icon" />
+                Desconto de <br />{" "}
+                <span>
+                  50% <AiTwotoneFire className="fire-icon" />
+                </span>
               </p>
             </div>
+
+            <div className="line"></div>
 
             <div className="text-proposed">
               <p className="installment">Pagamento em até 6x sem juros</p>
               <button className="btn-renegotiate">
                 Renegocie com 1 clique
               </button>
+
+              <div className="line"></div>
 
               <ul className="origin">
                 {showDetails && (
@@ -74,6 +85,52 @@ const Debts = () => {
                         <strong>Valor:</strong> R${divida.valor}
                         <strong>Descrição:</strong> {divida.descricao}
                         <strong>Data:</strong> {divida.data}
+                      </div>
+                    ))}
+                  </>
+                )}
+                <h3>Ver origem da dívida</h3>
+                <AiOutlineArrowDown onClick={toggleDetails}>
+                  {showDetails ? "Fechar" : "Abrir"} detalhes
+                </AiOutlineArrowDown>
+              </ul>
+            </div>
+          </div>
+
+
+          <div className="info-section">
+            <h1>Melhor Preço</h1>
+            <div className="prices">
+              <div>
+                <p className="paragraph-de">De: R${somaDividas1}</p>
+                <h2>Por: R${somaDividas1 * 0.7}</h2>
+              </div>
+              <p className="discount">
+                Desconto de <br />{" "}
+                <span>
+                  75% <AiTwotoneFire className="fire-icon" />
+                </span>
+              </p>
+            </div>
+
+            <div className="line"></div>
+
+            <div className="text-proposed">
+              <p className="installment">Pagamento em até 6x sem juros</p>
+              <button className="btn-renegotiate">
+                Renegocie com 1 clique
+              </button>
+
+              <div className="line"></div>
+
+              <ul className="origin">
+                {showDetails && (
+                  <>
+                    {cliente.dividas1.map((divida1, index) => (
+                      <div className="div-description" key={index}>
+                        <strong>Valor:</strong> R${divida1.valor}
+                        <strong>Descrição:</strong> {divida1.descricao}
+                        <strong>Data:</strong> {divida1.data}
                       </div>
                     ))}
                   </>
